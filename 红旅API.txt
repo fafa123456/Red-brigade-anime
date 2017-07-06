@@ -1,0 +1,32 @@
+如果连接我的服务器，把外网url中的 http://139.199.192.48:9091 替换成 http://192.168.112.5:8888 即可
+
+内网demo演示：http://192.168.112.5:8888/hldm/index.html
+
+外网API：	
+demo演示	http://139.199.192.48/hldm/index.html
+
+首页轮播图	
+url		http://139.199.192.48:9091/api/getlunbo
+传入api的参数	无
+返回数据格式	Json
+
+首页tab标签页
+url		http://139.199.192.48:9091/api/gethometab/数据类型参数type
+传入api的参数	数据类型参数type：传入如下1-4
+		1：新增连载 
+		2：新增完结
+		3：推荐连载 
+		4：推荐完结
+返回数据格式	Json
+
+连载动画页面	
+url		http://139.199.192.48:9091/api/getlianzai
+传入api的参数	无
+返回数据格式	Json
+
+专题页面
+url		http://139.199.192.48:9091/api/gettopics
+传入api的参数	无
+返回数据格式	Json
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--理想视口代码-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>红旅动漫</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/js/jquery-2.2.2.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/template.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <!--大盒z-->
+    <div class="bingbox">
+        <!--头部-->
+        <header>
+            <a class="meun">
+                <span class="glyphicon glyphicon-th-list"></span>
+            </a>
+            <!--<span class="glyphicon glyphicon-th-list"></span>-->
+            <h2>红旅动漫</h2>
+            <a href="#" class="search">
+                <span class="glyphicon glyphicon-search"></span>
+            </a>
+
+        </header>
+
+        <!--侧边栏-->
+
+        <!--轮播图区域-->
+        <div class="Carousel">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    ...
+                </div>
+            </div>
+        </div>
+
+        <script type="text/html" id="Car_tmp">
+            {{each list}}
+            <div class="item">
+                <a href="{{$value.url}}"><img src="{{$value.img}}" alt="..."></a>
+                <div class="carousel-caption">
+                    {{$value.title}}
+                </div>
+            </div>
+            {{/each}}
+        </script>
+
+        <!--// tab栏-->
+        <div class="tab">
+
+            <!--tab-nav tab栏的标题 索引项-->
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist" id="lis-index">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">新增连载</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">新增完结</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">推送连载</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">推荐完结</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <ul class="clearfiex">
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--侧边栏-->
+    <div class="left-meun">
+        <!--logo区域-->
+        <div class="logo">
+            <img src="http://192.168.112.112:8888/logo.png" alt="">
+        </div>
+        <!--连载动漫 切换按钮-->
+        <div class="lz-butt hei">
+            <a href="">连载动漫</a>
+        </div>
+        <!--专题列表-->
+        <div class="lib hei">
+            <a href="#">专题列表</a>
+        </div>
+        <!--关于我们-->
+        <div class="layout hei">
+            <a href="#">关于我们</a>
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>
+<!--新增完结的模板-->
+<script type="text/html" id="tab_Htpl">
+    {{each lib}}
+    <li>
+        <a href="{{$value.url}}">
+            <img src="{{$value.img}}" alt="{{$value.name}}">
+            <span>{{$value.update}}</span>
+        </a>
+    </li>
+    {{/each}}
+</script>
