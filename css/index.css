@@ -156,3 +156,15 @@ header h2 a {
 .left-meun img {
   width: 100%;
 }
+.bingbox {
+  position: relative;
+}
+.bingbox .zhez {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: none;
+}

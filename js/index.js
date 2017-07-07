@@ -1,5 +1,5 @@
 $.ajax({
-    url: " http://192.168.112.112:8888/api/getlunbo",
+    url: " http://139.199.192.48:9091/api/getlunbo",
     type: "get",
     success: function (data) {
         console.log(data);
@@ -14,7 +14,7 @@ $.ajax({
 
 
 $.ajax({
-    url: "http://192.168.112.112:8888/api/gethometab/1",
+    url: "http://139.199.192.48:9091/api/gethometab/1",
     type: "get",
     success: function (data) {
         var Tabstr = template("tab_Htpl", { lib: data });
@@ -32,7 +32,7 @@ $(function () {
         lis[i].onclick = function () {
             var x = this.index + 1;
             $.ajax({
-                url: "http://192.168.112.112:8888/api/gethometab/" + x,
+                url: "http://139.199.192.48:9091/api/gethometab/" + x,
                 type: "get",
                 success: function (data) {
                     var Tabstr = template("tab_Htpl", { lib: data });
@@ -60,8 +60,15 @@ $(function () {
     $(".left-meun")
     $(".meun").on("click", function () {
         $(".left-meun").css("display", "block");
+        $(".zhez").css("display", "block");
         $(".bingbox").css("transform", "translateX(200px)");
-    })
+    });
+     $(".zhez").on("click",function(){
+         $(".left-meun").css("display", "none");
+        $(".zhez").css("display", "none");
+        $(".bingbox").css("transform", "translateX(0px)");
+     })
+
     
 })
 
